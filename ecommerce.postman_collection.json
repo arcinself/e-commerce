@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "69c1a5e9-50aa-4d77-89fb-db796eb0f0df",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 1,\n    \"name\" : \"Archit\",\n    \"email\" : \"architrastogi28@gmail.com\",\n    \"phone\" : 8630176667,\n    \"address\" : \"Lucknow\" ,\n    \"creditCardNumber\" : \"1255555\",\n    \"password\" : \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"architrastogi28@gsmail.com\",\n    \"password\" : \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAddress",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\" : \"Thakurganj, Lucknow.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCreditCardNumber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"creditCardNumber\" :\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/creditCard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"creditCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Footwear\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryIdFromProductId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/inProduct/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"inProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Nike Shoes\",\n    \"details\" : \"A good pair of shoes.\",\n    \"price\" : 10000,\n    \"category_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductIdFromCategoryId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/inCategory/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"inCategory",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addreview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review\" : \"Great product.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/1/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttribute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attributes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttributeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postAttribute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttributeIdFromProductId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attributes/inProduct/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						"inProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReview",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/1/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postReview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review\" : \"Great to use.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/1/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductsByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductsFromCategoryID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/inCategory/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"inCategory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Sparx Shoes\",\n    \"details\" : \"A good pair of shoes.\",\n    \"price\" : 10000,\n    \"category_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategoryIdFromProductID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/inProduct/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"inProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrdersByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postOrders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\" : 1,\n    \"product_id\" : 1,\n    \"quantity\" : 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttributes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attributes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttributesByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attributes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAttributesFromProductID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/attributes/inProduct/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						"inProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAttributes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"xyz\",\n    \"value\" : \"123\",\n    \"product_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/attributes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"attributes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signupCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"architrastogi28@gmail.com\",\n    \"password\" : \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyY2hpdEBnbWFpbC5jb20iLCJlbmNyeXB0ZWRQYXNzd29yZCI6IiQyYiQxMiRLZm95M2VRc0x1N0R1Q0V3MmVjVmp1YmszU1MvN3FINktxMVQuT284MXd0bkJPclJGdEJLUyIsImlhdCI6MTYwMTcyMzU3NywiZXhwIjoxNjAxNzI2NTc3fQ.GzuD3dOuyia9LkQZP3dwv6crskQk8a62w5a5t0mXXas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"archit@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAddress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AZ21haWwuY29tIiwiZW5jcnlwdGVkUGFzc3dvcmQiOiIkMmIkMTIkcGdOS1AwWnFnSVRkYmtJcFdIS1ZQZTYzV2hGcFBJNkhCTnV6Y3VlVVZndXZpVTguTDFZY20iLCJpYXQiOjE2MDE3MjQxMzEsImV4cCI6MTYwMTcyNzEzMX0.4zRRHYD-UWBv-fwQexe_xKXi_ZY52Obpsak_KZl7jrA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\" : \"Ayodhya Nagri\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCreditCard",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"aman@gmail.com\",\n    \"creditCardNumber\" : 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers/creditCard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"creditCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AZ21haWwuY29tIiwiZW5jcnlwdGVkUGFzc3dvcmQiOiIkMmIkMTIkcGdOS1AwWnFnSVRkYmtJcFdIS1ZQZTYzV2hGcFBJNkhCTnV6Y3VlVVZndXZpVTguTDFZY20iLCJpYXQiOjE2MDE3Mjc0MTgsImV4cCI6MTYwMTczMDQxOH0.xpCotjo5pONieosd6rUFq-cmS_Wz9-r0CEUTCfz4dbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\" : 4,\n    \"product_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\" : 1,\n    \"product_id\" : 1,\n    \"quantity\" : 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AZ21haWwuY29tIiwiZW5jcnlwdGVkUGFzc3dvcmQiOiIkMmIkMTIkcGdOS1AwWnFnSVRkYmtJcFdIS1ZQZTYzV2hGcFBJNkhCTnV6Y3VlVVZndXZpVTguTDFZY20iLCJpYXQiOjE2MDE3Mjc0MTgsImV4cCI6MTYwMTczMDQxOH0.xpCotjo5pONieosd6rUFq-cmS_Wz9-r0CEUTCfz4dbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\" : 4,\n    \"product_id\" : 1,\n    \"quantity\" : 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart/quantity",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart",
+						"quantity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AZ21haWwuY29tIiwiZW5jcnlwdGVkUGFzc3dvcmQiOiIkMmIkMTIkcGdOS1AwWnFnSVRkYmtJcFdIS1ZQZTYzV2hGcFBJNkhCTnV6Y3VlVVZndXZpVTguTDFZY20iLCJpYXQiOjE2MDE3Mjc0MTgsImV4cCI6MTYwMTczMDQxOH0.xpCotjo5pONieosd6rUFq-cmS_Wz9-r0CEUTCfz4dbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingCart/removeProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingCart",
+						"removeProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTotalAmount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AZ21haWwuY29tIiwiZW5jcnlwdGVkUGFzc3dvcmQiOiIkMmIkMTIkcGdOS1AwWnFnSVRkYmtJcFdIS1ZQZTYzV2hGcFBJNkhCTnV6Y3VlVVZndXZpVTguTDFZY20iLCJpYXQiOjE2MDE3MjkxMjEsImV4cCI6MTYwMTczMjEyMX0.2XtSqrzgNBBEgk5r24tAU0-Ig5kl05lhO-4ZWc06t2Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\" : 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart/totalAmount",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart",
+						"totalAmount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

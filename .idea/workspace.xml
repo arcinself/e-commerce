@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d8c1fd9-abdc-41b2-8722-6d0cca69a389" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/datacenter/mysql/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datacenter/mysql/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validator/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validator/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/customers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/shoppingcart.js" afterDir="false" />
-    </list>
+    <list default="true" id="9d8c1fd9-abdc-41b2-8722-6d0cca69a389" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601635895969</updated>
       <workItem from="1601635897056" duration="45000" />
-      <workItem from="1601714304934" duration="15740000" />
+      <workItem from="1601714304934" duration="16111000" />
     </task>
     <servers />
   </component>
