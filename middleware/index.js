@@ -9,7 +9,7 @@ const checkToken = (req, res, next) => {
             throw new Error('Invalid token.')
         } else {
             let bearerToken = bearerHeader.split(' ')[1];
-            jwt.verify(bearerToken, process.env.mySecretKey, (err, user) => {
+            jwt.verify(bearerToken, process.env.mySalt, (err, user) => {
                 if (err) {
                     throw new Error('Invalid access token.')
                 } else {

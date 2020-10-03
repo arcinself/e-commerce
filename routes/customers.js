@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const {to} = require('await-to-js');
@@ -105,7 +106,7 @@ router.post('/login', async function(req, res, next) {
                 encryptedPassword : customer.encryptedPassword
             }
 
-            const token = jwt.sign(customer, process.env.GNOME_DESKTOP_SESSION_ID, {expiresIn: '50m'});
+            const token = jwt.sign(customer, process.env.mySalt, {expiresIn: '50m'});
 
             return res.json({
                 data : {
