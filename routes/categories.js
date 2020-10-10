@@ -4,6 +4,7 @@ const {to} = require('await-to-js');
 const mysql= require('./../lib/datacenter/mysql/connection');
 const logger = require('../lib/logger/winston');
 const joiCategoryValue = require('../lib/validator/validation');
+const cache = require("../lib/cache/redis");
 
 
 router.get('/', async function(req, res, next) {
@@ -19,6 +20,12 @@ router.get('/', async function(req, res, next) {
     if(!result[0]){
       throw new Error('No categories to display.');
     }
+
+    let Categories = JSON.stringify(result);
+
+    [err, result] = await to(cache.getValue("Categories"));
+
+    result = JSON.parse(Categories);
 
     return res.json({
       data : result,
@@ -92,7 +99,7 @@ router.get('/inProduct/:product_id', async function(req, res, next) {
     }
 
     if (!result[0]) {
-      throw new Error('No category found for this product Id.')
+      throw new Error('No category found for this product ID.')
     }
 
     return res.json({
@@ -148,6 +155,8 @@ router.post('/', async function(req, res, next) {
     if (err) {
       throw new Error('Error adding category.');
     }
+
+    [err, result] = await to(cache.setValue("Categories", JSON.stringify(result)));
 
     return res.json({
       data: {

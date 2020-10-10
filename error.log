@@ -1,1 +1,5 @@
-{"message":"Connection lost: The server closed the connection.","level":"error","service":"user-service"}
+{"message":"No category exists with this ID.","level":"error","service":"user-service"}
+{"message":"No category found for this product ID.","level":"error","service":"user-service"}
+{"message":"No product exists with this ID.","level":"error","service":"user-service"}
+{"message":"No product found for this category ID.","level":"error","service":"user-service"}
+{"message":"No product exists with this ID.","level":"error","service":"user-service"}

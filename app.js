@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
 
-const mysql = require('./../Ecommerce/lib/datacenter/mysql/connection.js');
+const mysql = require('./lib/datacenter/mysql/connection.js');
+const cache = require('./lib/cache/redis');
 const alert = require('./lib/sentry/sentry');
 
 const attributesRouter = require('./routes/attributes');
@@ -28,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 mysql.connect();
+cache.connect();
 
 app.use('/attributes', attributesRouter);
 app.use('/categories', categoriesRouter);

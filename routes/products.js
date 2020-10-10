@@ -5,6 +5,7 @@ const mysql= require('./../lib/datacenter/mysql/connection');
 const logger = require('../lib/logger/winston');
 const joiProductValue = require('../lib/validator/validation');
 const joiReviewValue = require('../lib/validator/validation');
+const cache = require("../lib/cache/redis");
 
 router.get('/', async function(req, res, next) {
     try{
@@ -19,6 +20,12 @@ router.get('/', async function(req, res, next) {
         if(!result[0]){
             throw new Error('No products to display.');
         }
+
+        let Products = JSON.stringify(result);
+
+        [err, result] = await to(cache.getValue("Products"));
+
+        result = JSON.parse(Products);
 
         return res.json({
             data : result,
@@ -92,7 +99,7 @@ router.get('/inCategory/:category_id', async function(req, res, next) {
         }
 
         if (!result[0]) {
-            throw new Error('No category found for this product ID.')
+            throw new Error('No product found for this category ID.')
         }
 
         return res.json({
@@ -141,6 +148,8 @@ router.post('/', async function(req, res, next) {
         if (err) {
             throw new Error('Error adding product.');
         }
+
+        [err, result] = await to(cache.setValue("Products", JSON.stringify(result)));
 
         return res.json({
             data: {
